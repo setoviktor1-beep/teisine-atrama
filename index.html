@@ -302,7 +302,7 @@
                         <p>
                             Tačiau tikroji vertė slypi praktikoje. Ilgametė darbo patirtis <strong
                                 class="text-neutral-900 font-semibold">Antstolio padėjėjos</strong> pareigose leido man
-                            iš vidaus pamatyti ir suprasti visus vykdymo proceso niuansus. Aš žinau ne tik tai, kas
+                            iš vidaus pamatyti ir suprasti visus vykdymo proceso ypatumus. Aš žinau ne tik tai, kas
                             parašyta įstatyme, bet ir tai, kaip sistema veikia realybėje.
                         </p>
                         <p>
@@ -505,25 +505,24 @@
             </div>
 
             <div class="bg-neutral-50 p-6 md:p-10 rounded-2xl border border-neutral-200 shadow-lg">
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formspree.io/f/YOUR_FORM_ID"
-                    method="POST">
+                <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6" onsubmit="sendEmail(event)">
                     <div>
                         <label class="block text-sm font-semibold text-neutral-700 mb-2">Vardas *</label>
-                        <input type="text" name="name" required
+                        <input type="text" id="name" required
                             class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                             placeholder="Jūsų vardas">
                     </div>
 
                     <div>
                         <label class="block text-sm font-semibold text-neutral-700 mb-2">El. Paštas *</label>
-                        <input type="email" name="email" required
+                        <input type="email" id="email" required
                             class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                             placeholder="jusu@pastas.lt">
                     </div>
 
                     <div class="md:col-span-2">
                         <label class="block text-sm font-semibold text-neutral-700 mb-2">Žinutė *</label>
-                        <textarea name="message" required rows="4"
+                        <textarea id="message" required rows="4"
                             class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                             placeholder="Kuo galime jums padėti?"></textarea>
                     </div>
@@ -623,6 +622,17 @@
                 }
             });
         });
+        function sendEmail(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = `Teisinė Atrama užklausa nuo ${name}`;
+            const body = `Vardas: ${name}%0D%0AEl. paštas: ${email}%0D%0A%0D%0AŽinutė:%0D%0A${message}`;
+
+            window.location.href = `mailto:laura.serzintiene@teisinėatrama.lt?subject=${subject}&body=${body}`;
+        }
     </script>
 </body>
 
