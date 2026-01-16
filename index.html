@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="lt" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teisinė Atrama | Profesionali Teisinė Pagalba</title>
-    <meta name="description" content="Profesionali teisinė pagalba vykdymo procesuose, skolų suvaldyme ir dokumentų rengime. Ilgametė patirtis antstolio kontoroje.">
-    
-    <!-- Google Fonts -->
+    <meta name="description"
+        content="Profesionali teisinė pagalba vykdymo procesuose, skolų suvaldyme ir dokumentų rengime. Ilgametė patirtis antstolio kontoroje.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (CDN) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Config -->
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        premium: {
-                            gold: '#D4AF37',
-                            'gold-light': '#F3E5AB',
-                            'gold-dark': '#AA8C2C',
-                            dark: '#0B1120', // Very deep blue/black
-                            slate: '#1E293B',
-                            'glass': 'rgba(15, 23, 42, 0.7)'
+                        primary: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                        },
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.95)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
                     }
                 }
             }
         }
     </script>
-    
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-gold-gradient {
-                @apply bg-clip-text text-transparent bg-gradient-to-r from-premium-gold via-premium-gold-light to-premium-gold;
-            }
-            .glass-panel {
-                @apply bg-premium-glass backdrop-blur-md border border-white/10 shadow-2xl;
-            }
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0B1120;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1E293B;
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ca8a04 0%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Animations */
         .fade-in-up {
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
             transform: translateY(20px);
         }
-        
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
 
         @keyframes fadeInUp {
             to {
@@ -85,358 +87,543 @@
         }
     </style>
 </head>
-<body class="bg-premium-dark text-slate-300 font-sans antialiased overflow-x-hidden">
+
+<body class="bg-white text-neutral-800 font-sans antialiased">
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12 glass-panel border-b-0">
+    <nav id="navbar"
+        class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-neutral-200 py-4 px-6 lg:px-12 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif font-bold tracking-wider text-white hover:text-premium-gold transition-colors">
-                TEISINĖ <span class="text-premium-gold">ATRAMA</span>
+            <a href="#" class="text-2xl font-serif font-bold text-neutral-900 hover:text-primary-600 transition-colors">
+                Teisinė <span class="gradient-text">Atrama</span>
             </a>
-            
-            <!-- Desktop Menu -->
+
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#paslaugos" class="text-sm uppercase tracking-widest hover:text-premium-gold transition-colors duration-300">Paslaugos</a>
-                <a href="#patirtis" class="text-sm uppercase tracking-widest hover:text-premium-gold transition-colors duration-300">Patirtis</a>
-                <a href="#duk" class="text-sm uppercase tracking-widest hover:text-premium-gold transition-colors duration-300">DUK</a>
-                <a href="#kontaktai" class="px-6 py-2 border border-premium-gold text-premium-gold hover:bg-premium-gold hover:text-premium-dark transition-all duration-300 rounded-sm text-sm font-semibold tracking-wider">
-                    KONTAKTAI
+                <a href="#paslaugos"
+                    class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors duration-300">Paslaugos</a>
+                <a href="#patirtis"
+                    class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors duration-300">Patirtis</a>
+                <a href="#duk"
+                    class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors duration-300">DUK</a>
+                <a href="#kontaktai"
+                    class="px-6 py-2.5 bg-primary-500 text-white hover:bg-primary-600 transition-all duration-300 rounded-lg text-sm font-semibold shadow-sm hover:shadow-md">
+                    Kontaktai
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-neutral-800 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-premium-dark border-t border-white/10 flex flex-col p-6 space-y-4 shadow-2xl">
-            <a href="#paslaugos" class="text-center text-sm uppercase tracking-widest hover:text-premium-gold transition-colors">Paslaugos</a>
-            <a href="#patirtis" class="text-center text-sm uppercase tracking-widest hover:text-premium-gold transition-colors">Patirtis</a>
-            <a href="#duk" class="text-center text-sm uppercase tracking-widest hover:text-premium-gold transition-colors">DUK</a>
-            <a href="#kontaktai" class="text-center text-premium-gold border border-premium-gold py-2 rounded-sm uppercase tracking-widest">Kontaktai</a>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 flex flex-col space-y-4">
+            <a href="#paslaugos"
+                class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors px-4">Paslaugos</a>
+            <a href="#patirtis"
+                class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors px-4">Patirtis</a>
+            <a href="#duk"
+                class="text-sm font-medium text-neutral-600 hover:text-primary-600 transition-colors px-4">DUK</a>
+            <a href="#kontaktai"
+                class="mx-4 text-center px-6 py-2.5 bg-primary-500 text-white rounded-lg text-sm font-semibold">Kontaktai</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed px-6">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-premium-dark"></div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 fade-in-up">
-            <div class="w-20 h-1 bg-premium-gold mx-auto mb-6"></div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
-                Profesionali teisinė pagalba <br>
-                <span class="text-premium-gold italic">vykdymo procesuose</span>
+    <header
+        class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-50 via-white to-primary-50 px-6 pt-24 pb-12">
+        <div class="max-w-6xl mx-auto text-center space-y-8 fade-in-up">
+            <div class="inline-block px-4 py-2 bg-primary-100 rounded-full mb-4">
+                <span class="text-sm font-semibold text-primary-700">Profesionali Teisinė Pagalba</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-neutral-900 leading-tight">
+                Teisiniai sprendimai <br>
+                <span class="gradient-text">vykdymo procesuose</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed delay-100 fade-in-up">
-                Sujungiame ilgametę patirtį antstolio kontoroje su profesionaliomis teisinėmis žiniomis, kad užtikrintume jūsų saugumą, ramybę ir teisingą procesų vykdymą.
+
+            <p class="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed delay-100 fade-in-up">
+                Ilgametė patirtis antstolio kontoroje ir teisės magistro išsilavinimas – jūsų ramybės garantija
             </p>
-            <div class="pt-8 delay-200 fade-in-up">
-                <a href="#kontaktai" class="inline-block px-10 py-4 bg-premium-gold text-premium-dark font-bold text-lg rounded shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] hover:bg-white transition-all duration-300 transform hover:-translate-y-1">
-                    GAUTI KONSULTACIJĄ
+
+            <div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center delay-200 fade-in-up">
+                <a href="#kontaktai"
+                    class="px-8 py-4 bg-primary-500 text-white font-semibold rounded-xl hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Gauti Konsultaciją
+                </a>
+                <a href="#paslaugos"
+                    class="px-8 py-4 bg-white text-neutral-700 font-semibold rounded-xl hover:bg-neutral-50 transition-all border-2 border-neutral-200 hover:border-primary-300">
+                    Sužinoti Daugiau
                 </a>
             </div>
         </div>
 
         <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-500">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
             </svg>
         </div>
     </header>
 
-    <!-- Paslaugos (Services Grid) -->
-    <section id="paslaugos" class="py-24 px-6 bg-premium-dark relative overflow-hidden">
-        <!-- Decorative background element -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-premium-slate/20 skew-x-12 transform origin-top pointer-events-none"></div>
+    <!-- Stats Section -->
+    <section class="py-16 md:py-20 px-6 bg-white border-y border-neutral-200">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">8+</div>
+                <div class="text-neutral-600">Metų Patirties</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">100%</div>
+                <div class="text-neutral-600">Konfidencialumas</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-bold text-primary-500 mb-2">24/7</div>
+                <div class="text-neutral-600">Pasiekiamumas</div>
+            </div>
+        </div>
+    </section>
 
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-premium-gold text-sm font-bold tracking-[0.2em] uppercase">Kompetencija</span>
-                <h2 class="text-3xl md:text-5xl font-serif text-white mt-4 font-semibold">Mūsų Paslaugos</h2>
-                <div class="w-24 h-0.5 bg-white/20 mx-auto mt-6"></div>
+    <!-- Services -->
+    <section id="paslaugos" class="py-20 md:py-24 px-6 bg-neutral-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-primary-600 text-sm font-bold tracking-wider uppercase">Kas Mes Darome</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-neutral-900 mt-4 font-bold">Mūsų Paslaugos
+                </h2>
+                <p class="text-neutral-600 mt-4 max-w-2xl mx-auto">
+                    Kompleksinė teisinė pagalba pritaikyta jūsų situacijai
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <!-- Service 1 -->
-                <div class="group p-8 glass-panel rounded-xl hover:bg-premium-slate/80 transition-all duration-500 hover:-translate-y-2 border-t-2 border-transparent hover:border-premium-gold">
-                    <div class="w-14 h-14 bg-premium-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-premium-gold/20 transition-all">
-                        <svg class="w-7 h-7 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Skolų Suvaldymas</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Profesionali pagalba bendraujant su antstoliais, skolų išdėstymas dalimis ir areštuotų sąskaitų problemų sprendimas.</p>
+                    <h3 class="text-xl font-serif font-semibold text-neutral-900 mb-3">Skolų Suvaldymas</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Profesionali pagalba bendraujant su antstoliais,
+                        skolų išdėstymas dalimis ir areštuotų sąskaitų problemų sprendimas</p>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="group p-8 glass-panel rounded-xl hover:bg-premium-slate/80 transition-all duration-500 hover:-translate-y-2 border-t-2 border-transparent hover:border-premium-gold">
-                    <div class="w-14 h-14 bg-premium-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-premium-gold/20 transition-all">
-                        <svg class="w-7 h-7 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                            </path>
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Procesiniai Dokumentai</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Kokybiškas ieškinių, skundų, atsiliepimų ir kitų teisinių dokumentų rengimas valstybinėms institucijoms.</p>
+                    <h3 class="text-xl font-serif font-semibold text-neutral-900 mb-3">Procesiniai Dokumentai</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Kokybiškas ieškinių, skundų, atsiliepimų ir kitų
+                        teisinių dokumentų rengimas valstybinėms institucijoms</p>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="group p-8 glass-panel rounded-xl hover:bg-premium-slate/80 transition-all duration-500 hover:-translate-y-2 border-t-2 border-transparent hover:border-premium-gold">
-                    <div class="w-14 h-14 bg-premium-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-premium-gold/20 transition-all">
-                        <svg class="w-7 h-7 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Sutarčių Ruošimas</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Nuomos, paskolos, darbo ir kitų sutarčių rengimas bei auditas, užtikrinant jūsų interesų apsaugą.</p>
+                    <h3 class="text-xl font-serif font-semibold text-neutral-900 mb-3">Sutarčių Ruošimas</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Nuomos, paskolos, darbo ir kitų sutarčių
+                        rengimas bei auditas, užtikrinant jūsų interesų apsaugą</p>
                 </div>
 
                 <!-- Service 4 -->
-                <div class="group p-8 glass-panel rounded-xl hover:bg-premium-slate/80 transition-all duration-500 hover:-translate-y-2 border-t-2 border-transparent hover:border-premium-gold">
-                    <div class="w-14 h-14 bg-premium-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-premium-gold/20 transition-all">
-                        <svg class="w-7 h-7 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                            </path>
+                        </svg>
                     </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Teisinės Konsultacijos</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Aiškūs atsakymai į rūpimus klausimus. Strategijos parengimas sudėtingose teisinėse situacijose.</p>
+                    <h3 class="text-xl font-serif font-semibold text-neutral-900 mb-3">Teisinės Konsultacijos</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Aiškūs atsakymai į rūpimus klausimus.
+                        Strategijos parengimas sudėtingose teisinėse situacijose</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Patirtis (Experience) -->
-    <section id="patirtis" class="py-24 px-6 bg-premium-slate border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/2">
-                <div class="relative">
-                    <!-- Placeholder Frame for Image -->
-                    <div class="aspect-[3/4] rounded-sm bg-premium-dark border border-white/10 relative overflow-hidden shadow-2xl">
-                        <!-- Placeholder Image Gradient/Icon -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-premium-dark to-slate-800 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+    <!-- Experience -->
+    <section id="patirtis" class="py-20 md:py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Photo -->
+                <div class="relative order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="profile-photo.jpg" alt="Laura Seržintienė - Teisės Magistrė"
+                                class="w-full h-full object-cover object-center">
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
-                            <p class="text-white font-serif text-xl">Teisės Magistrė</p>
-                            <p class="text-premium-gold text-sm uppercase tracking-wider">Antstolio Padėjėjos Patirtis</p>
+                        <div
+                            class="absolute -z-10 top-6 -right-6 w-full h-full border-2 border-primary-300 rounded-2xl">
                         </div>
                     </div>
-                    <!-- Decorative box behind -->
-                    <div class="absolute -z-10 top-6 -right-6 w-full h-full border-2 border-premium-gold/30 rounded-sm"></div>
-                </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 space-y-8">
-                <div>
-                    <span class="text-premium-gold text-sm font-bold tracking-[0.2em] uppercase">Patirtis</span>
-                    <h2 class="text-3xl md:text-5xl font-serif text-white mt-4 font-semibold leading-tight">
-                        Ekspertinė patirtis <br>
-                        <span class="italic text-slate-400">iš vidaus</span>
-                    </h2>
-                </div>
-                
-                <div class="space-y-6 text-slate-300 font-light text-lg">
-                    <p>
-                        Mano profesinis kelias prasidėjo nuo gilaus teisės studijų suvokimo – įgytas <strong class="text-white font-normal">Teisės Magistro</strong> laipsnis padėjo tvirtus pamatus.
-                    </p>
-                    <p>
-                        Tačiau tikroji vertė slypi praktikoje. Ilgametė darbo patirtis <strong class="text-white font-normal">Antstolio padėjėjos</strong> pareigose leido man iš vidaus pamatyti ir suprasti visus vykdymo proceso niuansus. Aš žinau ne tik tai, kas parašyta įstatyme, bet ir tai, kaip sistema veikia realybėje.
-                    </p>
-                    <p>
-                        Ši unikali kombinacija leidžia man pasiūlyti efektyviausius sprendimus areštų panaikinimo, skolų išieškojimo ir suvaldymo klausimais. Aš ne tik rengiu dokumentus – aš kuriu strategiją, kuri veikia.
-                    </p>
                 </div>
 
-                <ul class="space-y-4 pt-4">
-                    <li class="flex items-center text-slate-300">
-                        <span class="w-2 h-2 bg-premium-gold rounded-full mr-4"></span>
-                        Praktinis vykdymo proceso išmanymas
-                    </li>
-                    <li class="flex items-center text-slate-300">
-                        <span class="w-2 h-2 bg-premium-gold rounded-full mr-4"></span>
-                        Efektyvus bendravimas su institucijomis
-                    </li>
-                    <li class="flex items-center text-slate-300">
-                        <span class="w-2 h-2 bg-premium-gold rounded-full mr-4"></span>
-                        Konfidencialumas ir individualus dėmesys
-                    </li>
-                </ul>
+                <!-- Content -->
+                <div class="space-y-6 order-1 lg:order-2">
+                    <div>
+                        <span class="text-primary-600 text-sm font-bold tracking-wider uppercase">Patirtis</span>
+                        <h2
+                            class="text-3xl md:text-4xl lg:text-5xl font-serif text-neutral-900 mt-4 font-bold leading-tight">
+                            Ekspertinė patirtis <br>
+                            <span class="text-primary-600">iš vidaus</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-4 text-neutral-600 text-base md:text-lg leading-relaxed">
+                        <p>
+                            Mano profesinis kelias prasidėjo nuo gilaus teisės studijų suvokimo – įgytas <strong
+                                class="text-neutral-900 font-semibold">Teisės Magistro</strong> laipsnis padėjo tvirtus
+                            pamatus.
+                        </p>
+                        <p>
+                            Tačiau tikroji vertė slypi praktikoje. Ilgametė darbo patirtis <strong
+                                class="text-neutral-900 font-semibold">Antstolio padėjėjos</strong> pareigose leido man
+                            iš vidaus pamatyti ir suprasti visus vykdymo proceso niuansus. Aš žinau ne tik tai, kas
+                            parašyta įstatyme, bet ir tai, kaip sistema veikia realybėje.
+                        </p>
+                        <p>
+                            Ši unikali kombinacija leidžia man pasiūlyti efektyviausius sprendimus areštų panaikinimo,
+                            skolų išieškojimo ir suvaldymo klausimais. Aš ne tik rengiu dokumentus – aš kuriu
+                            strategiją, kuri veikia.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-sm text-neutral-700">Praktinis vykdymo proceso išmanymas</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-sm text-neutral-700">Efektyvus bendravimas su institucijomis</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-sm text-neutral-700">Konfidencialumas ir individualus dėmesys</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-3 h-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-sm text-neutral-700">Strateginis požiūris į kiekvieną bylą</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- DUK (FAQ) -->
-    <section id="duk" class="py-24 px-6 bg-premium-dark relative">
+    <section id="duk" class="py-20 md:py-24 px-6 bg-neutral-50">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="text-premium-gold text-sm font-bold tracking-[0.2em] uppercase">Informacija</span>
-                <h2 class="text-3xl md:text-5xl font-serif text-white mt-4 font-semibold">Dažniausiai Užduodami Klausimai</h2>
-                <div class="w-24 h-0.5 bg-white/20 mx-auto mt-6"></div>
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-primary-600 text-sm font-bold tracking-wider uppercase">Informacija</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-neutral-900 mt-4 font-bold">Dažniausiai
+                    Užduodami Klausimai</h2>
             </div>
 
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="border border-white/10 rounded-lg overflow-hidden bg-white/5">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="text-lg font-serif text-white">Ar jūs esate advokatas?</span>
-                        <svg class="w-5 h-5 text-premium-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-neutral-50 transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="text-lg font-serif text-neutral-900 font-semibold">Ar jūs esate advokatas?</span>
+                        <svg class="w-5 h-5 text-primary-600 transform transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
-                    <div class="px-6 pb-6 text-slate-400 hidden text-sm leading-relaxed border-t border-white/5 pt-4">
-                        Aš esu kvalifikuota teisininkė (Teisės Magistras), turinti antstolio padėjėjos patirtį. Teikiu profesionalias teisines paslaugas, rengiu dokumentus ir konsultuoju, tačiau neatstovauju klientų teisme kaip advokatas. Daugeliu atvejų (dokumentų rengimas, derybos, antstolių klausimai) advokato statusas nėra būtinas, o paslaugos gali būti lankstesnės.
+                    <div
+                        class="px-6 pb-6 text-neutral-600 hidden text-sm md:text-base leading-relaxed border-t border-neutral-100 pt-4">
+                        Aš esu kvalifikuota teisininkė (Teisės Magistras), turinti antstolio padėjėjos patirtį. Teikiu
+                        profesionalias teisines paslaugas, rengiu dokumentus ir konsultuoju, tačiau neatstovauju klientų
+                        teisme kaip advokatas. Daugeliu atvejų (dokumentų rengimas, derybos, antstolių klausimai)
+                        advokato statusas nėra būtinas, o paslaugos gali būti lankstesnės.
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="border border-white/10 rounded-lg overflow-hidden bg-white/5">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="text-lg font-serif text-white">Kokios paslaugų kainos?</span>
-                        <svg class="w-5 h-5 text-premium-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-neutral-50 transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="text-lg font-serif text-neutral-900 font-semibold">Kokios paslaugų kainos?</span>
+                        <svg class="w-5 h-5 text-primary-600 transform transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
-                    <div class="px-6 pb-6 text-slate-400 hidden text-sm leading-relaxed border-t border-white/5 pt-4">
-                        Kaina priklauso nuo situacijos sudėtingumo ir reikalingų dokumentų apimties. Kiekviena situacija individuali. Pirminė konsultacija ir situacijos analizė kainuoja sutartinę kainą, kurią aptarsime susisiekus. Visada siekiu pasiūlyti teisingą kainos ir kokybės santykį.
+                    <div
+                        class="px-6 pb-6 text-neutral-600 hidden text-sm md:text-base leading-relaxed border-t border-neutral-100 pt-4">
+                        Kaina priklauso nuo situacijos sudėtingumo ir reikalingų dokumentų apimties. Kiekviena situacija
+                        individuali. Pirminė konsultacija ir situacijos analizė kainuoja sutartinę kainą, kurią
+                        aptarsime susisiekus. Visada siekiu pasiūlyti teisingą kainos ir kokybės santykį.
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="border border-white/10 rounded-lg overflow-hidden bg-white/5">
-                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="text-lg font-serif text-white">Per kiek laiko paruošiate dokumentus?</span>
-                        <svg class="w-5 h-5 text-premium-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm">
+                    <button
+                        class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-neutral-50 transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="text-lg font-serif text-neutral-900 font-semibold">Per kiek laiko paruošiate
+                            dokumentus?</span>
+                        <svg class="w-5 h-5 text-primary-600 transform transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
-                    <div class="px-6 pb-6 text-slate-400 hidden text-sm leading-relaxed border-t border-white/5 pt-4">
-                        Standartiniai procesiniai dokumentai dažniausiai paruošiami per 1-3 darbo dienas nuo visos reikiamos informacijos gavimo. Skubiais atvejais stengiuosi pagelbėti kuo greičiau. Tikslų terminą visada suderiname prieš pradedant darbus.
+                    <div
+                        class="px-6 pb-6 text-neutral-600 hidden text-sm md:text-base leading-relaxed border-t border-neutral-100 pt-4">
+                        Standartiniai procesiniai dokumentai dažniausiai paruošiami per 1-3 darbo dienas nuo visos
+                        reikiamos informacijos gavimo. Skubiais atvejais stengiuosi pagelbėti kuo greičiau. Tikslų
+                        terminą visada suderiname prieš pradedant darbus.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Kontaktai (Contact) -->
-    <section id="kontaktai" class="py-24 px-6 bg-gradient-to-b from-premium-slate to-premium-dark border-t border-white/5">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Contact Info -->
-                <div class="space-y-10">
-                    <div>
-                        <span class="text-premium-gold text-sm font-bold tracking-[0.2em] uppercase">Susisiekite</span>
-                        <h2 class="text-3xl md:text-5xl font-serif text-white mt-4 font-semibold">Pradėkime spręsti jūsų problemą</h2>
-                        <p class="text-slate-400 mt-6 leading-relaxed">
-                            Nelaukite, kol situacija taps nevaldoma. Susisiekite konsultacijai ir rasime geriausią teisinį sprendimą būtent jums.
-                        </p>
-                    </div>
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 px-6 bg-gradient-to-r from-primary-500 to-primary-600">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
+                Pradėkime spręsti jūsų teisinę problemą
+            </h2>
+            <p class="text-lg text-primary-50 mb-8">
+                Susisiekite šiandien ir gaukite profesionalią konsultaciją
+            </p>
+            <a href="#kontaktai"
+                class="inline-block px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-neutral-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Susisiekti Dabar
+            </a>
+        </div>
+    </section>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 flex-shrink-0 border border-white/10">
-                                <svg class="w-5 h-5 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-serif text-lg mb-1">Telefonas</h4>
-                                <p class="text-slate-400">[TELEFONAS]</p>
-                            </div>
-                        </div>
+    <!-- Contact -->
+    <section id="kontaktai" class="py-20 md:py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-primary-600 text-sm font-bold tracking-wider uppercase">Susisiekite</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-neutral-900 mt-4 font-bold">Laukiu Jūsų Žinutės</h2>
+            </div>
 
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mr-6 flex-shrink-0 border border-white/10">
-                                <svg class="w-5 h-5 text-premium-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <div>
-                                <h4 class="text-white font-serif text-lg mb-1">El. Paštas</h4>
-                                <p class="text-slate-400">[EL_PAŠTAS]</p>
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+                <div
+                    class="text-center p-6 bg-neutral-50 rounded-2xl border border-neutral-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
                     </div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">Telefonas</h4>
+                    <a href="tel:+37064801434"
+                        class="text-neutral-600 text-sm hover:text-primary-600 transition-colors">+370 648 01434</a>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="glass-panel p-8 md:p-10 rounded-xl relative">
-                    <form class="space-y-6" onsubmit="event.preventDefault(); return false;">
-                        <input type="hidden" name="form-name" value="contact">
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2 font-semibold">Vardas</label>
-                            <input type="text" class="w-full bg-premium-dark/50 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-premium-gold transition-colors placeholder-white/20" placeholder="Jūsų vardas">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2 font-semibold">El. Paštas</label>
-                            <input type="email" class="w-full bg-premium-dark/50 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-premium-gold transition-colors placeholder-white/20" placeholder="jusu@pastas.lt">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2 font-semibold">Žinutė</label>
-                            <textarea rows="4" class="w-full bg-premium-dark/50 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-premium-gold transition-colors placeholder-white/20" placeholder="Kuo galime jums padėti?"></textarea>
-                        </div>
-                        
-                        <button class="w-full bg-premium-gold text-premium-dark font-bold py-4 rounded hover:bg-white transition-colors uppercase tracking-widest text-sm shadow-lg">
+                <div
+                    class="text-center p-6 bg-neutral-50 rounded-2xl border border-neutral-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">El. Paštas</h4>
+                    <a href="mailto:laura.serzintiene@teisinėatrama.lt"
+                        class="text-neutral-600 text-sm hover:text-primary-600 transition-colors break-all">laura.serzintiene@teisinėatrama.lt</a>
+                </div>
+
+                <div
+                    class="text-center p-6 bg-neutral-50 rounded-2xl border border-neutral-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-semibold text-neutral-900 mb-2">Darbo Laikas</h4>
+                    <p class="text-neutral-600 text-sm">I-V: 9:00 - 18:00</p>
+                </div>
+            </div>
+
+            <div class="bg-neutral-50 p-6 md:p-10 rounded-2xl border border-neutral-200 shadow-lg">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST">
+                    <div>
+                        <label class="block text-sm font-semibold text-neutral-700 mb-2">Vardas *</label>
+                        <input type="text" name="name" required
+                            class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                            placeholder="Jūsų vardas">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-neutral-700 mb-2">El. Paštas *</label>
+                        <input type="email" name="email" required
+                            class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                            placeholder="jusu@pastas.lt">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold text-neutral-700 mb-2">Žinutė *</label>
+                        <textarea name="message" required rows="4"
+                            class="w-full px-4 py-3 bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                            placeholder="Kuo galime jums padėti?"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <button type="submit"
+                            class="w-full bg-primary-500 text-white font-semibold py-4 rounded-lg hover:bg-primary-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                             Siųsti Žinutę
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-12 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
-            <div>
-                <a href="#" class="text-xl font-serif font-bold text-white tracking-wider">
-                    TEISINĖ <span class="text-premium-gold">ATRAMA</span>
-                </a>
-                <p class="text-slate-500 text-xs mt-4 max-w-sm">
-                    Profesionali teisinė pagalba ir konsultacijos. Sprendimai, kurie atneša ramybę.
-                </p>
-            </div>
-            
-            <div class="text-slate-600 text-xs max-w-md">
-                <p class="mb-2">
-                    Atsakomybės apribojimas: Paslaugos teikiamos vadovaujantis Lietuvos Respublikos įstatymais.
-                    Pabrėžiame, kad neteikiame advokato paslaugų ir neatstovaujame teismuose bylose, kur būtinas advokatas.
-                </p>
-                <p>&copy; 2024 Teisinė Atrama. Visos teisės saugomos.</p>
+    <footer class="bg-neutral-900 text-neutral-400 py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6 md:gap-8">
+                <div>
+                    <div class="text-xl md:text-2xl font-serif font-bold text-white mb-3">
+                        Teisinė <span class="gradient-text">Atrama</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-neutral-500 max-w-sm">
+                        Profesionali teisinė pagalba ir konsultacijos. Sprendimai, kurie atneša ramybę.
+                    </p>
+                </div>
+
+                <div class="text-neutral-500 text-xs max-w-md">
+                    <p class="mb-2">
+                        <strong class="text-neutral-400">Atsakomybės apribojimas:</strong> Paslaugos teikiamos
+                        vadovaujantis Lietuvos Respublikos įstatymais.
+                        Pabrėžiame, kad neteikiame advokato paslaugų ir neatstovaujame teismuose bylose, kur būtinas
+                        advokatas.
+                    </p>
+                    <p class="mt-4">&copy; 2024 Teisinė Atrama. Visos teisės saugomos.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
+    <!-- JavaScript -->
     <script>
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('py-2', 'bg-premium-glass', 'shadow-2xl');
-                navbar.classList.remove('py-4', 'border-b-0');
+                navbar.classList.add('shadow-lg');
             } else {
-                navbar.classList.add('py-4', 'border-b-0');
-                navbar.classList.remove('py-2', 'shadow-2xl');
+                navbar.classList.remove('shadow-lg');
             }
         });
 
         // Mobile Menu
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
 
         // FAQ Toggle
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('svg');
-            
-            // Close other open FAQs if needed (optional)
-            // document.querySelectorAll('.px-6.pb-6').forEach(el => {
-            //     if (el !== content) el.classList.add('hidden');
-            // });
 
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 icon.classList.add('rotate-180');
-                button.classList.add('bg-white/5');
+                button.classList.add('bg-neutral-50');
             } else {
                 content.classList.add('hidden');
                 icon.classList.remove('rotate-180');
-                button.classList.remove('bg-white/5');
+                button.classList.remove('bg-neutral-50');
             }
         }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
+
 </html>
