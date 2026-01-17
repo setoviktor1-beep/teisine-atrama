@@ -1,0 +1,67 @@
+{
+    "project": "Teisinė Atrama",
+    "strategy": "Hybrid (Single Page + Dedicated Service Pages + Blog)",
+    "root_directory": "c:/Users/setov/teisine-atrama/",
+    "file_tree": [
+        {
+            "path": "index.html",
+            "type": "file",
+            "purpose": "Home / Landing (General Brand & Contact)",
+            "status": "Existing"
+        },
+        {
+            "path": "paslaugos/",
+            "type": "directory",
+            "purpose": "Dedicated pages for high-volume keywords",
+            "children": [
+                {
+                    "path": "skolu-suvaldymas.html",
+                    "purpose": "Rank for 'skolų suvaldymas', 'antstoliai'",
+                    "keyword_id": "debt_management",
+                    "status": "Planned"
+                },
+                {
+                    "path": "dokumentu-rengimas.html",
+                    "purpose": "Rank for 'teisiniai dokumentai'",
+                    "keyword_id": "procedural_docs",
+                    "status": "Planned"
+                },
+                {
+                    "path": "sutarciu-rengimas.html",
+                    "purpose": "Rank for 'sutarčių rengimas'",
+                    "keyword_id": "contracts",
+                    "status": "Planned"
+                }
+            ]
+        },
+        {
+            "path": "straipsniai/",
+            "type": "directory",
+            "purpose": "Content Marketing / Blog for Long-tail keywords",
+            "children": [
+                {
+                    "path": "index.html",
+                    "purpose": "Blog list / Archives",
+                    "status": "Planned"
+                },
+                {
+                    "path": "kaip-sustabdyti-antstolius.html",
+                    "purpose": "Example Article (Pillar Content)",
+                    "status": "Planned"
+                }
+            ]
+        },
+        {
+            "path": "sitemap.xml",
+            "type": "file",
+            "purpose": "Indexing",
+            "status": "Existing"
+        },
+        {
+            "path": "robots.txt",
+            "type": "file",
+            "purpose": "Crawling rules",
+            "status": "Existing"
+        }
+    ]
+}
