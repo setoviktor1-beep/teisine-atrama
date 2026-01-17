@@ -1,0 +1,63 @@
+{
+  "seo_plan": {
+    "project_name": "Teisinė Atrama",
+    "domain": "teisinėatrama.lt",
+    "punycode_domain": "xn--teisinatrama-jvb.lt",
+    "objectives": [
+      "Improve visibility in Google search results",
+      "Enhance appearance on social media shares (Facebook, LinkedIn)",
+      "Ensure correct indexing by crawler bots"
+    ],
+    "implemented_actions": [
+      {
+        "category": "Technical SEO",
+        "item": "sitemap.xml",
+        "status": "Created",
+        "description": "XML file listing the main site URL to facilitating indexing."
+      },
+      {
+        "category": "Technical SEO",
+        "item": "robots.txt",
+        "status": "Created",
+        "description": "Standard file allowing access to all crawlers and pointing to the sitemap."
+      },
+      {
+        "category": "Social Meta Tags",
+        "item": "Open Graph Tags",
+        "status": "Implemented",
+        "details": {
+          "og:title": "Teisinė Atrama | Profesionali Teisinė Pagalba",
+          "og:description": "Profesionali teisinė pagalba vykdymo procesuose...",
+          "og:image": "profile-photo.jpg"
+        }
+      },
+      {
+        "category": "Structured Data",
+        "item": "JSON-LD Schema",
+        "status": "Implemented",
+        "type": "LegalService",
+        "fields": [
+          "name",
+          "url",
+          "telephone",
+          "email",
+          "addressCountry"
+        ]
+      }
+    ],
+    "future_recommendations": [
+      {
+        "action": "Backlink Building",
+        "description": "Acquire links from reputable legal directories and catalogs."
+      },
+      {
+        "action": "Google Search Console",
+        "description": "Register the property to monitor search performance and indexing status."
+      },
+      {
+        "action": "Content Updates",
+        "description": "Regularly update FAQ or add a blog to signal site activity to Google."
+      }
+    ]
+  }
+}
