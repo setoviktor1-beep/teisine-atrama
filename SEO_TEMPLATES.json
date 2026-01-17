@@ -1,0 +1,41 @@
+{
+    "project": "Teisinė Atrama",
+    "templates": {
+        "homepage": {
+            "title_format": "Teisinė Atrama | {{main_keyword}}",
+            "meta_description_format": "{{main_service_summary}}. {{experience_proof}}. {{call_to_action}}.",
+            "h1_format": "{{main_value_proposition}}",
+            "example": {
+                "title": "Teisinė Atrama | Profesionali Teisinė Pagalba Skolų Išieškojime",
+                "description": "Profesionali teisinė pagalba vykdymo procesuose, skolų suvaldyme. Ilgametė antstolio padėjėjos patirtis garantuoja efektyvius sprendimus. Susisiekite.",
+                "h1": "Teisiniai sprendimai vykdymo procesuose"
+            }
+        },
+        "service_page": {
+            "title_format": "{{service_name}} | Teisinė Atrama",
+            "meta_description_format": "Profesionalus {{service_name_lowercase}} {{location}}. Sužinokite kaip mes galime padėti {{problem_solution}}. Konsultacija telefonu.",
+            "h1_format": "{{service_name}}",
+            "example": {
+                "title": "Skolų Suvaldymas | Teisinė Atrama",
+                "description": "Profesionalus skolų suvaldymas ir bendravimas su antstoliais. Sužinokite kaip mes galime padėti panaikinti areštus. Konsultacija telefonu.",
+                "h1": "Skolų Suvaldymas"
+            }
+        },
+        "blog_article": {
+            "title_format": "{{article_topic}}: {{benefit_or_guide}} | Teisinė Atrama",
+            "meta_description_format": "Sužinokite {{article_topic_summary}}. Praktiniai patarimai ir teisininko įžvalgos apie {{keyword}}. Skaitykite daugiau.",
+            "h1_format": "{{article_topic}}: {{benefit_or_guide}}",
+            "example": {
+                "title": "Sąskaitų Areštas: Ką Daryti ir Kaip Panaikinti? | Teisinė Atrama",
+                "description": "Sužinokite kaip greitai reaguoti į sąskaitų areštą. Praktiniai patarimai ir teisininko įžvalgos apie antstolių veiksmus. Skaitykite daugiau.",
+                "h1": "Sąskaitų Areštas: Ką Daryti ir Kaip Panaikinti?"
+            }
+        }
+    },
+    "rules": {
+        "title_length_max": 60,
+        "description_length_max": 160,
+        "description_length_min": 120,
+        "include_brand": true
+    }
+}
