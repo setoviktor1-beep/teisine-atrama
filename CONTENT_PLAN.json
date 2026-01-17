@@ -1,0 +1,79 @@
+{
+    "project": "Teisinė Atrama",
+    "period": "8 Weeks",
+    "goal": "Build topical authority in Debt Management & Procedural Documents",
+    "schedule": [
+        {
+            "week": 1,
+            "focus": "Foundation Pages (Services)",
+            "content_type": "Service Page",
+            "topic": "Skolų Suvaldymas",
+            "keyword": "skolų suvaldymas",
+            "url": "/paslaugos/skolu-suvaldymas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 2,
+            "focus": "Foundation Pages (Services)",
+            "content_type": "Service Page",
+            "topic": "Procesinių Dokumentų Rengimas",
+            "keyword": "teisiniai dokumentai",
+            "url": "/paslaugos/dokumentu-rengimas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 3,
+            "focus": "Pillar Content (Problem Solving)",
+            "content_type": "Article",
+            "topic": "Sąskaitų areštas: Kaip nuimti areštą nuo banko sąskaitos?",
+            "keyword": "sąskaitų areštas",
+            "url": "/straipsniai/saskaitu-arestas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 4,
+            "focus": "Pillar Content (Problem Solving)",
+            "content_type": "Article",
+            "topic": "Antstolių veiksmai: Ką daryti gavus laišką iš antstolio?",
+            "keyword": "antstoliai pagalba",
+            "url": "/straipsniai/antstoliu-laiskas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 5,
+            "focus": "Educational Content",
+            "content_type": "Article",
+            "topic": "Skolų išdėstymas dalimis: Kaip susitarti?",
+            "keyword": "skolų išdėstymas",
+            "url": "/straipsniai/skolu-isdestymas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 6,
+            "focus": "Specific Services",
+            "content_type": "Article",
+            "topic": "Ieškinys teismui: Kaip teisingai paruošti?",
+            "keyword": "ieškinio rengimas",
+            "url": "/straipsniai/ieskinio-rengimas.html",
+            "status": "Pending"
+        },
+        {
+            "week": 7,
+            "focus": "Local SEO & Trust",
+            "content_type": "Article",
+            "topic": "Teisinė konsultacija Vilniuje ir internetu",
+            "keyword": "teisinė konsultacija",
+            "url": "/straipsniai/teisine-konsultacija.html",
+            "status": "Pending"
+        },
+        {
+            "week": 8,
+            "focus": "Review & Optimization",
+            "content_type": "Audit",
+            "topic": "Content Performance Review",
+            "keyword": "N/A",
+            "url": "N/A",
+            "status": "Pending"
+        }
+    ]
+}
