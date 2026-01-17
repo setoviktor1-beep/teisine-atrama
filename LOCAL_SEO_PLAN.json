@@ -1,0 +1,47 @@
+{
+    "project": "Teisinė Atrama",
+    "nap_consistency": {
+        "business_name": "Teisinė Atrama",
+        "phone": "+370 648 01434",
+        "email": "laura.serzintiene@teisinėatrama.lt",
+        "website": "https://teisinėatrama.lt",
+        "service_area": "Lietuva (Visas regionas)",
+        "address_type": "Service Area Business (SAB) - No physical storefront visible"
+    },
+    "google_business_profile": {
+        "action": "Create/Claim",
+        "category": "Legal Services",
+        "attributes": [
+            "Online appointments",
+            "On-site services (if applicable)"
+        ]
+    },
+    "citation_sources_priority": [
+        {
+            "name": "Rekvizitai.lt",
+            "status": "To Do",
+            "note": "Must match NAP exactly."
+        },
+        {
+            "name": "Info.lt",
+            "status": "To Do"
+        },
+        {
+            "name": "Visalietuva.lt",
+            "status": "To Do"
+        },
+        {
+            "name": "Facebook Business Page",
+            "status": "To Do",
+            "note": "Verify 'About' section matches NAP."
+        },
+        {
+            "name": "LinkedIn Company Page",
+            "status": "To Do"
+        }
+    ],
+    "reviews_strategy": {
+        "platform": "Google",
+        "tactic": "Ask satisfied clients for reviews after successful consultation."
+    }
+}
