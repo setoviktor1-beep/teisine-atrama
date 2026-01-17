@@ -1,0 +1,54 @@
+{
+  "project": "Teisinė Atrama",
+  "primary_locale": "lt-LT",
+  "brand_keywords": ["Teisinė Atrama", "Laura Seržintienė"],
+  "keyword_map": [
+    {
+      "service_id": "debt_management",
+      "page_url": "/#paslaugos",
+      "primary_keyword": "skolų suvaldymas",
+      "secondary_keywords": [
+        "antstoliai pagalba",
+        "sąskaitų areštas",
+        "skolų išdėstymas",
+        "vykdymo procesas"
+      ],
+      "user_intent": "Transactional (Seeking help with debts)"
+    },
+    {
+      "service_id": "procedural_docs",
+      "page_url": "/#paslaugos",
+      "primary_keyword": "teisiniai dokumentai",
+      "secondary_keywords": [
+        "ieškinio rengimas",
+        "atsiliepimas į ieškinį",
+        "skundas antstoliui",
+        "teisiniai raštai"
+      ],
+      "user_intent": "Commercial (Need document preparation)"
+    },
+    {
+      "service_id": "contracts",
+      "page_url": "/#paslaugos",
+      "primary_keyword": "sutarčių rengimas",
+      "secondary_keywords": [
+        "nuomos sutartis",
+        "paskolos sutartis",
+        "darbo sutarties auditas",
+        "teisinės sutartys"
+      ],
+      "user_intent": "Commercial"
+    },
+    {
+      "service_id": "consulting",
+      "page_url": "/#paslaugos",
+      "primary_keyword": "teisinė konsultacija",
+      "secondary_keywords": [
+        "teisininkas vilniuje",
+        "teisinė pagalba",
+        "teisininko patarimas"
+      ],
+      "user_intent": "Informational/Transactional"
+    }
+  ]
+}
